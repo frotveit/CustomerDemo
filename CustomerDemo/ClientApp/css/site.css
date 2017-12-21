@@ -64,3 +64,12 @@
         text-overflow: ellipsis;
     }
 }
+
+.order {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.order-item {
+    padding: 5px;
+}

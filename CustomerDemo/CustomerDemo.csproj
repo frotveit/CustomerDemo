@@ -8,7 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="jquery.TypeScript.DefinitelyTyped" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +24,39 @@
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
     <Content Remove="ClientApp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\components\Customer.tsx" />
+    <None Remove="ClientApp\components\Customers.tsx" />
+    <None Remove="ClientApp\components\EditOrder.tsx" />
+    <None Remove="ClientApp\components\Order.tsx" />
+    <None Remove="ClientApp\dto\locationDto.ts" />
+    <None Remove="ClientApp\dto\orderItemDto.ts" />
+    <None Remove="ClientApp\dto\productDto.ts" />
+    <None Remove="ClientApp\store\CustomerStore.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\Customer.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\Customers.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\EditOrder.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\Order.tsx" />
+    <TypeScriptCompile Include="ClientApp\dto\customerDto.ts" />
+    <TypeScriptCompile Include="ClientApp\dto\response.ts" />
+    <TypeScriptCompile Include="ClientApp\dto\locationDto.ts" />
+    <TypeScriptCompile Include="ClientApp\dto\orderItemDto.ts" />
+    <TypeScriptCompile Include="ClientApp\dto\productDto.ts" />
+    <TypeScriptCompile Include="ClientApp\store\CustomerStore.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\test\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerCore\CustomerCore.csproj" />
+    <ProjectReference Include="..\CustomerStore\CustomerStore.csproj" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

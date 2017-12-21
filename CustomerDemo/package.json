@@ -1,9 +1,10 @@
 {
-  "name": "CustomerDemo",
+  "name": "customer-demo",
   "private": true,
   "version": "0.0.0",
   "dependencies": {
     "@types/history": "4.6.0",
+    "@types/jquery": "3.2.16",
     "@types/react": "15.0.35",
     "@types/react-dom": "15.5.1",
     "@types/react-hot-loader": "3.0.3",
@@ -41,5 +42,8 @@
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2",
     "webpack-merge": "4.1.0"
+  },
+  "devDependencies": {
+    "@types/es6-promise": "*"
   }
 }

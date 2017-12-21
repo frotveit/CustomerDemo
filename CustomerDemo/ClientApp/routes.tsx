@@ -2,11 +2,13 @@ import * as React from 'react';
 import { Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import Home from './components/Home';
-import FetchData from './components/FetchData';
-import Counter from './components/Counter';
+import Orders from './components/Orders';
+import Customers from './components/Customers';
+import NewOrder from './components/NewOrder';
 
 export const routes = <Layout>
     <Route exact path='/' component={ Home } />
-    <Route path='/counter' component={ Counter } />
-    <Route path='/fetchdata/:startDateIndex?' component={ FetchData } />
+    <Route path='/orders' component={Orders} />
+    <Route path='/customers' component={Customers} />
+    <Route path='/newOrder' component={ NewOrder } />
 </Layout>;
