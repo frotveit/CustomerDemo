@@ -12,9 +12,9 @@ namespace CustomerStore.Repositories
 
     public class OrderRepository : IOrderRepository
     {
-        private readonly AppDbContext _appDbContext;
+        private readonly IAppDbContext _appDbContext;
 
-        public OrderRepository(AppDbContext appDbContext)
+        public OrderRepository(IAppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }

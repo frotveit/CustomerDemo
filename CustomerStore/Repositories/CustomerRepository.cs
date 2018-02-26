@@ -11,8 +11,8 @@ namespace CustomerStore.Repositories
 
     public class CustomerRepository : ICustomerRepository
     {
-        private readonly AppDbContext _appDbContext;
-        public CustomerRepository(AppDbContext appDbContext)
+        private readonly IAppDbContext _appDbContext;
+        public CustomerRepository(IAppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }

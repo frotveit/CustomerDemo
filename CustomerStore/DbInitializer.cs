@@ -9,7 +9,7 @@ namespace CustomerStore
     {
         public static void Seed(IApplicationBuilder applicationBuilder)
         {
-            AppDbContext context = applicationBuilder.ApplicationServices.GetRequiredService<AppDbContext>();
+            IAppDbContext context = applicationBuilder.ApplicationServices.GetRequiredService<AppDbContext>();
 
             if (!context.Products.Any())
             {

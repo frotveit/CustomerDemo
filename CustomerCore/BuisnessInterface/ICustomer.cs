@@ -1,6 +1,6 @@
 ﻿
 
-namespace CustomerDemo.BuisnessInterface
+namespace CustomerCore.BuisnessInterface
 {
     public interface ICustomer
     {
