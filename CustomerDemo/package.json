@@ -2,7 +2,7 @@
   "name": "customer-demo",
   "private": true,
   "version": "0.0.0",
-  "dependencies": {    
+  "dependencies": {
     "aspnet-prerendering": "^3.0.1",
     "aspnet-webpack": "^2.0.1",
     "aspnet-webpack-react": "^3.0.0",
